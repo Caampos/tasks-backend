@@ -30,7 +30,6 @@ public class TaskControllerTest {
 	@Test
 	public void naoDeveSalvarTarefaSemDescricao() throws ValidationException {
 		Task todo = new Task();
-	//	todo.setTask("Descricao");
 	    todo.setDueDate(LocalDate.now());
 		try {
 		controller.save(todo);
@@ -46,7 +45,6 @@ public class TaskControllerTest {
 	public void naoDeveSalvarTarefaSemData() {
 		Task todo = new Task();
 		  todo.setTask("Descricao");
-		  //  todo.setDueDate(LocalDate.now());
 			try {
 			controller.save(todo);
 			Assert.fail("Nao deveria chegar nesse ponto!");
